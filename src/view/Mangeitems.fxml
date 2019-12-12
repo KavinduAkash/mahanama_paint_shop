@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="605.0" prefWidth="1128.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemController">
+   <children>
+      <Label layoutX="18.0" layoutY="9.0" prefHeight="35.0" prefWidth="163.0" text="Item Manage" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="itemtable" layoutX="22.0" layoutY="404.0" onMouseClicked="#selectItem" prefHeight="191.0" prefWidth="1085.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Item Id" />
+          <TableColumn prefWidth="75.0" text="Brand Name" />
+            <TableColumn prefWidth="94.0" text="Catogary Name" />
+            <TableColumn prefWidth="211.0" text="Item Name" />
+            <TableColumn prefWidth="281.0" text="Description" />
+            <TableColumn minWidth="0.0" prefWidth="120.0" text="Color" />
+            <TableColumn prefWidth="113.0" text="Mesure" />
+            <TableColumn prefWidth="113.0" text="Hand On Qty" />
+        </columns>
+      </TableView>
+      <Separator layoutX="14.0" layoutY="367.0" prefHeight="0.0" prefWidth="1085.0" />
+      <Label layoutX="33.0" layoutY="47.0" text="Item ID :" />
+      <Label layoutX="34.0" layoutY="207.0" text="Item Name :" />
+      <Label layoutX="38.0" layoutY="271.0" text="Description :" />
+      <Label layoutX="685.0" layoutY="45.0" text="Color ID :" />
+      <TextField fx:id="colortxt" layoutX="679.0" layoutY="69.0" prefHeight="27.0" prefWidth="126.0" />
+      <TextField fx:id="itemnmetxt" layoutX="34.0" layoutY="229.0" prefHeight="27.0" prefWidth="311.0" />
+      <TextArea fx:id="itemdesctxt" layoutX="38.0" layoutY="292.0" prefHeight="68.0" prefWidth="311.0" />
+      <Label layoutX="680.0" layoutY="137.0" text="Meshure :" />
+      <TextField fx:id="mesuretxt" layoutX="680.0" layoutY="156.0" prefHeight="27.0" prefWidth="181.0" />
+      <JFXButton fx:id="savebtn" layoutX="787.0" layoutY="320.0" onAction="#addItem" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #4cd137;" text="Save" />
+      <JFXButton fx:id="updatebtn" layoutX="892.0" layoutY="320.0" onAction="#updateItem" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #fbc531;" text="Update" />
+      <JFXButton fx:id="deletebtn" layoutX="1002.0" layoutY="320.0" onAction="#deleteItem" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #e84118;" text="Delete" />
+      <TableView fx:id="cattable" layoutX="447.0" layoutY="55.0" onMouseClicked="#selectCat" prefHeight="127.0" prefWidth="191.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Catogary Id" />
+            <TableColumn prefWidth="128.0" text="Catogary Name" />
+         </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="129.0" />
+      <Label layoutX="33.0" layoutY="81.0" text="Catogary ID:" />
+      <TableView fx:id="brandtable" layoutX="447.0" layoutY="227.0" onMouseClicked="#selectBrand" prefHeight="135.0" prefWidth="191.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Brand Id" />
+            <TableColumn prefWidth="128.0" text="Brand Name" />
+         </columns>
+      </TableView>
+      <Label layoutX="34.0" layoutY="144.0" text="Brand ID:" />
+      <TextField fx:id="brandsearchbar" layoutX="447.0" layoutY="199.0" onKeyReleased="#searchBrand" prefHeight="25.0" prefWidth="163.0" promptText="Search by brand Name.." />
+      <TextField fx:id="catsearchbar" layoutX="447.0" layoutY="25.0" onKeyReleased="#searchCat" prefHeight="25.0" prefWidth="163.0" promptText="Search by Catogary Name.." />
+      <TextField fx:id="catIdtxt" layoutX="33.0" layoutY="102.0" />
+      <TextField fx:id="brandIdtxt" layoutX="33.0" layoutY="165.0" />
+      <TableView fx:id="colortable" layoutX="914.0" layoutY="68.0" onMouseClicked="#selectColor" prefHeight="169.0" prefWidth="191.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Color Id" />
+            <TableColumn prefWidth="128.0" text="Color Name" />
+         </columns>
+      </TableView>
+      <TextField fx:id="colorsearchbar" layoutX="914.0" layoutY="37.0" onKeyReleased="#searchColor" prefHeight="27.0" prefWidth="163.0" promptText="Search by Color Name.." />
+      <Separator layoutX="665.0" layoutY="18.0" orientation="VERTICAL" prefHeight="348.0" prefWidth="0.0" />
+      <Label fx:id="itemIdlb" layoutX="86.0" layoutY="47.0" text="Label" textFill="#f20404">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="whatcatlb" layoutX="194.0" layoutY="106.0" />
+      <Label fx:id="whatbrandlb" layoutX="190.0" layoutY="169.0" />
+      <Label fx:id="whatcolorlb" layoutX="817.0" layoutY="74.0" />
+      <ImageView fx:id="resetbtn" fitHeight="27.0" fitWidth="27.0" layoutX="190.0" layoutY="13.0" onMouseClicked="#resetFields">
+         <image>
+            <Image url="@../image/reset.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="itemIdsearchbar" layoutX="22.0" layoutY="374.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="121.0" promptText="Search by Item ID.." />
+      <TextField fx:id="itemNamesearchbar" layoutX="150.0" layoutY="374.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="206.0" promptText=" Search by Item Name.." />
+      <TextField fx:id="itemColorsearchbar" layoutX="363.0" layoutY="374.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="142.0" promptText="Search by Color.." />
+      <JFXButton fx:id="Lbtn" layoutX="684.0" layoutY="191.0" onMouseClicked="#LbtnAction" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #bbdefb;" text="L" />
+      <JFXButton fx:id="mlbtn" layoutX="730.0" layoutY="191.0" onMouseClicked="#mlBtnAction" style="-fx-background-color: #bbdefb;" text="ml" />
+      <JFXButton fx:id="kgbtn" layoutX="777.0" layoutY="191.0" onMouseClicked="#kgBtnAction" style="-fx-background-color: #bbdefb;" text="kg" />
+      <JFXButton fx:id="gbtn" layoutX="827.0" layoutY="191.0" onMouseClicked="#gBtnAction" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #bbdefb;" text="g" />
+   </children>
+</AnchorPane>

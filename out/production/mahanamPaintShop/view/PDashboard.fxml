@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="651.0" prefWidth="1145.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PDashboardController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="150.0" prefWidth="1097.0" styleClass="valueRack" stylesheets="@../CSS/PDashboard.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="59.0">
+         <children>
+            <AnchorPane layoutX="113.0" layoutY="11.0" prefHeight="129.0" prefWidth="135.0" stylesheets="@../CSS/PDashboard.css">
+               <styleClass>
+                  <String fx:value="valuepane" />
+                  <String fx:value="valuepane1" />
+               </styleClass>
+               <children>
+                  <Label layoutX="27.0" layoutY="38.0" style="-fx-alignment: center;" styleClass="valueheadtxt" stylesheets="@../CSS/PDashboard.css" text="Today Sales" />
+                  <Label fx:id="todaysaleslb" layoutX="53.0" layoutY="75.0" prefHeight="32.0" prefWidth="43.0" style="-fx-alignment: center;" styleClass="valueCounttxt" stylesheets="@../CSS/PDashboard.css" text="Count" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="379.0" layoutY="12.0" prefHeight="129.0" prefWidth="135.0" stylesheets="@../CSS/PDashboard.css">
+               <styleClass>
+                  <String fx:value="valuepane" />
+                  <String fx:value="valuepane2" />
+               </styleClass>
+               <children>
+                  <Label layoutX="18.0" layoutY="41.0" style="-fx-alignment: center;" styleClass="valueheadtxt" stylesheets="@../CSS/PDashboard.css" text="Monthly Profit" />
+                  <Label fx:id="monthlyprofitlb" layoutX="38.0" layoutY="75.0" style="-fx-alignment: center;" styleClass="valueCounttxt" stylesheets="@../CSS/PDashboard.css" text="Count" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="630.0" layoutY="12.0" prefHeight="129.0" prefWidth="135.0" stylesheets="@../CSS/PDashboard.css">
+               <styleClass>
+                  <String fx:value="valuepane" />
+                  <String fx:value="valuepane3" />
+               </styleClass>
+               <children>
+                  <Label layoutX="27.0" layoutY="39.0" style="-fx-alignment: center;" styleClass="valueheadtxt" stylesheets="@../CSS/PDashboard.css" text="Today Profit" />
+                  <Label fx:id="todayProfitlb" layoutX="38.0" layoutY="75.0" style="-fx-alignment: center;" styleClass="valueCounttxt" stylesheets="@../CSS/PDashboard.css" text="Count" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="888.0" layoutY="12.0" prefHeight="129.0" prefWidth="135.0" stylesheets="@../CSS/PDashboard.css">
+               <styleClass>
+                  <String fx:value="valuepane" />
+                  <String fx:value="valuepane4" />
+               </styleClass>
+               <children>
+                  <Label layoutX="15.0" layoutY="39.0" style="-fx-alignment: center;" styleClass="valueheadtxt" stylesheets="@../CSS/PDashboard.css" text="Expired Badges" />
+                  <Label fx:id="expbadgecountlb" layoutX="52.0" layoutY="75.0" prefHeight="32.0" prefWidth="43.0" style="-fx-alignment: center;" styleClass="valueCounttxt" stylesheets="@../CSS/PDashboard.css" text="Count" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="623.0" layoutY="227.0" prefHeight="0.0" prefWidth="468.0" />
+      <Label layoutX="628.0" layoutY="234.0" text="Payments :" />
+      <AnchorPane layoutX="628.0" layoutY="260.0" prefHeight="52.0" prefWidth="464.0" styleClass="notifiboxRed" stylesheets="@../CSS/PDashboard.css">
+         <children>
+            <Label layoutX="141.0" layoutY="16.0" styleClass="notifiRestext" stylesheets="@../CSS/PDashboard.css" text="orders are skipped withoutmake payment.." />
+            <Label fx:id="skippaymentib" layoutX="109.0" layoutY="18.0" styleClass="notifiRestext" stylesheets="@../CSS/PDashboard.css" text="Label" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="630.0" layoutY="322.0" prefHeight="52.0" prefWidth="464.0" styleClass="notifiboxGreen" stylesheets="@../CSS/PDashboard.css">
+         <children>
+            <Label layoutX="141.0" layoutY="16.0" styleClass="notifiGreentxt" stylesheets="@../CSS/PDashboard.css" text="orders are completed with make payment.." />
+            <Label fx:id="completepaymentib1" layoutX="109.0" layoutY="17.0" styleClass="notifiGreentxt" stylesheets="@../CSS/PDashboard.css" text="Label" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="633.0" layoutY="396.0" prefHeight="0.0" prefWidth="468.0" />
+      <Label layoutX="633.0" layoutY="414.0" text="Returns :" />
+      <Label layoutX="703.0" layoutY="442.0" text="Return to Shop :" />
+      <Label layoutX="912.0" layoutY="442.0" text="Return to Stock Hall  :" />
+      <Label fx:id="shopreturncountlb" layoutX="810.0" layoutY="442.0" text="Label" />
+      <Label fx:id="stockhallreturnlb" layoutX="1043.0" layoutY="442.0" text="Label" />
+      <Separator layoutX="633.0" layoutY="486.0" prefHeight="0.0" prefWidth="468.0" />
+      <Label layoutX="634.0" layoutY="498.0" text="Expired Objects:" />
+      <AnchorPane layoutX="637.0" layoutY="523.0" prefHeight="52.0" prefWidth="464.0" styleClass="notifiboxRed" stylesheets="@../CSS/PDashboard.css">
+         <children>
+            <Label layoutX="200.0" layoutY="16.0" styleClass="notifiRestext" stylesheets="@../CSS/PDashboard.css" text="object had expired.." />
+            <Label fx:id="expobjectlb" layoutX="168.0" layoutY="16.0" styleClass="notifiRestext" stylesheets="@../CSS/PDashboard.css" text="Label" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="55.0" layoutY="491.0" text="Time :" />
+      <Label fx:id="txttime" layoutX="89.0" layoutY="489.0" style="-fx-text-fill: #039be5;" text="Label" textFill="#039be5">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtdate" layoutX="90.0" layoutY="570.0" text="Label" textFill="#00e676">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="566.0" text="Date :" />
+      <ImageView fitHeight="261.0" fitWidth="270.0" layoutX="121.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/logo/cause29.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="345.0" layoutY="382.0" text="Partner" textFill="#1a237e">
+         <font>
+            <Font name="Verdana" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="22.0" text="Dashboard" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="305.0" prefWidth="235.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VerificationController">
+   <children>
+      <ImageView fitHeight="114.0" fitWidth="118.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@../image/—Pngtree—purple%20paint%20spots_1050461.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="70.0" layoutY="16.0" text="V" textFill="WHITE">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="57.0" prefHeight="17.0" prefWidth="96.0" text="ERIFICATION" textFill="#020614">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="conformbtn" layoutX="51.0" layoutY="220.0" onAction="#conformVerify" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #4cd137;" text="Conform" />
+      <JFXPasswordField fx:id="Passwordtxt" labelFloat="true" layoutX="12.0" layoutY="148.0" prefHeight="25.0" prefWidth="204.0" promptText="Password" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="651.0" prefWidth="1145.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StockRefillingUIController">
+   <children>
+      <TableView fx:id="itemtable" layoutX="14.0" layoutY="96.0" onMouseClicked="#getSelectItem" prefHeight="139.0" prefWidth="751.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Item Id" />
+          <TableColumn prefWidth="90.0" text="Brand Name" />
+            <TableColumn prefWidth="101.99996948242188" text="Catogary Name" />
+            <TableColumn prefWidth="96.0" text="Item Name" />
+            <TableColumn prefWidth="113.0" text="Description" />
+            <TableColumn minWidth="0.0" prefWidth="98.0" text="Color" />
+            <TableColumn prefWidth="83.66668701171875" text="Mesure" />
+            <TableColumn prefWidth="102.33331298828125" text="HandOnQty" />
+        </columns>
+      </TableView>
+      <TextField fx:id="itemIdsearchbar" layoutX="22.0" layoutY="63.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="121.0" promptText="Search by Item ID.." />
+      <TableView fx:id="badgetable" layoutX="773.0" layoutY="95.0" onMouseClicked="#getSelectBadge" prefHeight="139.0" prefWidth="360.0">
+        <columns>
+          <TableColumn prefWidth="74.0" text="Badge Id" />
+          <TableColumn prefWidth="97.0" text="Buying Price" />
+            <TableColumn prefWidth="99.33331298828125" text="Expire Date" />
+            <TableColumn prefWidth="83.666748046875" text="Sale Price" />
+        </columns>
+      </TableView>
+      <TextField fx:id="buypricesearchbar" layoutX="773.0" layoutY="61.0" onKeyReleased="#searchBadge" prefHeight="25.0" prefWidth="92.0" promptText="buy price..(RS.)" />
+      <DatePicker fx:id="expdatesearchpicbar" layoutX="873.0" layoutY="61.0" onAction="#searchByExpDateAction" onKeyReleased="#searchBadge" prefHeight="25.0" prefWidth="123.0" promptText="exp. date" />
+      <TextField fx:id="salepricesearchbar" layoutX="1003.0" layoutY="61.0" onKeyReleased="#searchBadge" prefHeight="25.0" prefWidth="100.0" promptText="Sale price..(Rs.)" />
+      <TextField fx:id="itemidtxt" layoutX="95.0" layoutY="268.0" prefHeight="25.0" prefWidth="97.0" />
+      <TextField fx:id="buypricetxt" layoutX="801.0" layoutY="268.0" prefHeight="25.0" prefWidth="112.0" />
+      <TextField fx:id="qtytxt" layoutX="1035.0" layoutY="267.0" prefHeight="25.0" prefWidth="74.0" />
+      <Label layoutX="95.0" layoutY="245.0" text="Item Id :" />
+      <Label layoutX="804.0" layoutY="246.0" text="Buying Price:" />
+      <Label layoutX="1050.0" layoutY="245.0" text="Qty :" />
+      <TableView fx:id="stocktable" layoutX="12.0" layoutY="403.0" onMouseClicked="#getSelectStock" prefHeight="219.0" prefWidth="1113.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Add Date" />
+          <TableColumn prefWidth="83.33332824707031" text="Stock Id" />
+            <TableColumn prefWidth="93.33334350585938" text="Badge Id" />
+            <TableColumn prefWidth="104.33334350585938" text="Buy Price" />
+            <TableColumn prefWidth="115.00003051757812" text="Sale Price" />
+            <TableColumn prefWidth="102.6666259765625" text="ExpDate" />
+            <TableColumn prefWidth="91.33331298828125" text="Item Id" />
+            <TableColumn prefWidth="113.0" text="Item Name" />
+            <TableColumn prefWidth="113.6666259765625" text="Color" />
+            <TableColumn prefWidth="107.333251953125" text="Mesure" />
+            <TableColumn prefWidth="107.333251953125" text="Qty" />
+        </columns>
+      </TableView>
+      <TextField fx:id="itemnametxt" layoutX="197.0" layoutY="268.0" prefHeight="25.0" prefWidth="162.0" />
+      <TextField fx:id="colornametxt" layoutX="364.0" layoutY="268.0" prefHeight="25.0" prefWidth="90.0" />
+      <TextField fx:id="badgeidtxt" layoutX="568.0" layoutY="268.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="569.0" layoutY="246.0" text="Badge Id :" />
+      <TextField fx:id="expdatetxt" layoutX="684.0" layoutY="268.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="684.0" layoutY="247.0" text="Date" />
+      <TextField fx:id="salepricetxt" layoutX="918.0" layoutY="268.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="928.0" layoutY="246.0" text="Saleing Price :" />
+      <JFXButton fx:id="addbtn" layoutX="367.0" layoutY="311.0" onAction="#addStock" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #4cd137;" text="Save" />
+      <JFXButton fx:id="updatebtn" layoutX="476.0" layoutY="310.0" onAction="#updateStockAction" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #fbc531;" text="Update" />
+      <JFXButton fx:id="deletebtn" layoutX="591.0" layoutY="310.0" onAction="#deleteStockAction" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #e84118;" text="Delete" />
+      <Label layoutX="197.0" layoutY="245.0" text="Name :" />
+      <Label layoutX="364.0" layoutY="245.0" text="Color Name :" />
+      <TextField fx:id="mesureidtxt" layoutX="459.0" layoutY="268.0" prefHeight="25.0" prefWidth="105.0" />
+      <Label layoutX="462.0" layoutY="245.0" text="Mesure" />
+      <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="1113.0" layoutY="60.0">
+         <image>
+            <Image url="@../image/search.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1054.0" layoutY="15.0" text="New Badge" />
+      <Separator layoutX="1051.0" layoutY="15.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="4.0" />
+      <Label layoutX="21.0" layoutY="12.0" text="Stock Refilling" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="stocksearchbar" layoutX="187.0" layoutY="361.0" onKeyReleased="#searchStockAction2" prefHeight="25.0" prefWidth="280.0" promptText="Search by Stock Id,Badge Id,Item Id.." />
+      <Label layoutX="23.0" layoutY="247.0" text="Stock Id:" />
+      <Label fx:id="stockidlb" layoutX="21.0" layoutY="271.0" text="label" textFill="#f20404">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="itemNamesearchbar" layoutX="150.0" layoutY="63.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="206.0" promptText=" Search by Item Name.." />
+      <TextField fx:id="itemColorsearchbar" layoutX="363.0" layoutY="63.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="142.0" promptText="Search by Color.." />
+      <TextField fx:id="badgeIdsearchbar" layoutX="773.0" layoutY="30.0" onKeyReleased="#searchBadge" prefHeight="25.0" prefWidth="154.0" promptText="Search by only Badge ID.." />
+      <DatePicker fx:id="searchadddatedatepicker" layoutX="33.0" layoutY="361.0" onAction="#searchStockAction" prefHeight="25.0" prefWidth="142.0" promptText="Search by add date.." />
+      <Label fx:id="stockadddatelb" layoutX="23.0" layoutY="302.0" text="Label" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="568.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnReportsController">
+   <children>
+      <TableView fx:id="returntable" layoutX="119.0" layoutY="135.0" prefHeight="279.0" prefWidth="638.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Return ID" />
+            <TableColumn prefWidth="75.0" text="Order ID" />
+            <TableColumn prefWidth="75.0" text="Item ID" />
+            <TableColumn prefWidth="75.0" text="Badge ID" />
+            <TableColumn prefWidth="75.0" text="Qty" />
+            <TableColumn prefWidth="75.0" text="Amount" />
+            <TableColumn prefWidth="75.0" text="date" />
+            <TableColumn prefWidth="113.0" text="Return Method" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="printbtn" layoutX="820.0" layoutY="493.0" onMouseClicked="#printReportAction">
+         <image>
+            <Image url="@../image/naviIcon/print_48px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="365.0" layoutY="81.0" text="Returns View" textFill="#0d47a1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+.valueRack{
+
+}
+
+.valuepane{
+    -fx-pref-height: 150;
+    -fx-pref-width: 150;
+    -fx-border-radius: 90%;
+    -fx-background-radius: 90%;
+
+}
+
+.valuepane1{
+    -fx-background-color: #ffcc80;
+    -fx-border-color: #e65100;
+
+}
+
+.valuepane2{
+    -fx-background-color: #81d4fa;
+    -fx-border-color: #01579b;
+}
+
+.valuepane3{
+    -fx-background-color: #69f0ae;
+    -fx-border-color: #00c853;
+}
+
+.valuepane4{
+    -fx-background-color:#ffcdd2;
+    -fx-border-color: #d50000;
+}
+
+.valueheadtxt{
+     -fx-font: 16px Tahoma;
+     -fx-text-fill: #ffffff;
+     -fx-font-weight: bold;
+ }
+
+.valueCounttxt{
+    -fx-font: 25px Tahoma;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+.notifiboxRed{
+    -fx-background-color: #ffcdd2;
+    -fx-border-color: #d50000;
+}
+.notifiRestext{
+    -fx-text-fill: #b71c1c;
+}
+.notifiboxGreen{
+    -fx-background-color: #69f0ae;
+    -fx-border-color: #00c853;
+}
+.notifiGreentxt{
+    -fx-text-fill: #00695c;
+}

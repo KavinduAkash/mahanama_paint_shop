@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="609.0" prefWidth="1117.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SalePaymentController">
+   <children>
+      <AnchorPane fx:id="publicpanepay" layoutY="40.0" prefHeight="569.0" prefWidth="1117.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane prefHeight="40.0" prefWidth="1117.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Hyperlink fx:id="skippayhyper" layoutX="1028.0" layoutY="8.0" onAction="#skipPayment" text="Skip For Now.." />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

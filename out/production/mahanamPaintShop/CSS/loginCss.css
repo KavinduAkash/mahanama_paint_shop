@@ -1,0 +1,23 @@
+.loginimage{
+    -fx-background-image: url("../image/logpic.jpg");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-size: auto 450px;
+}
+
+.loginOnpane{
+    -fx-background-color: RGBA(0,140,255,0.17);
+}
+
+.loginbtnstyl{
+    -fx-background-radius: 50 50 50 50;
+    -fx-border-radius: 50 50 50 50;
+}
+
+.loginbtnstyl:hover{
+    -fx-pref-height : 40 ;
+    -fx-pref-width: 148;
+}
+.loginloadgif{
+    -fx-background-color: RGBA(117,114,255,0);
+}

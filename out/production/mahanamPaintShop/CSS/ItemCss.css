@@ -1,0 +1,16 @@
+.itemBtns{
+    -fx-background-color: #32c2ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.itemMangebtn{
+    -fx-background-radius: 50 0 0 50;
+}
+
+.catogaryMangebtn{
+    -fx-background-radius: 0 0 0 0;
+}
+
+.colorMangebtn{
+    -fx-background-radius: 0 50 50 0;
+}

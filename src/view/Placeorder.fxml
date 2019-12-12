@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="651.0" prefWidth="1145.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceorderController">
+   <children>
+      <Label layoutX="34.0" layoutY="12.0" text="Place Order" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="282.0" text="Item Id" />
+      <Label layoutX="147.0" layoutY="282.0" text="Name" />
+      <Label layoutX="573.0" layoutY="281.0" text="Unit Pric(Rs.)" />
+      <Label layoutX="477.0" layoutY="279.0" text="Qty" />
+      <Label layoutX="667.0" layoutY="282.0" text="Amount(Rs.)" />
+      <TextField fx:id="itemidtxt" layoutX="28.0" layoutY="301.0" prefHeight="25.0" prefWidth="68.0" />
+      <TextField fx:id="itemnametxt" layoutX="100.0" layoutY="301.0" prefHeight="25.0" prefWidth="125.0" />
+      <TextField fx:id="qtytxt" layoutX="468.0" layoutY="301.0" onKeyReleased="#enterSaleQty" prefHeight="25.0" prefWidth="40.0" />
+      <TableView fx:id="orderdetailtable" layoutX="21.0" layoutY="416.0" onMouseClicked="#getSelectOrderDetails" prefHeight="221.0" prefWidth="879.0">
+        <columns>
+          <TableColumn prefWidth="60.000030517578125" text="Index" />
+          <TableColumn prefWidth="93.0" text="Item ID" />
+            <TableColumn prefWidth="116.0" text="Item Name" />
+            <TableColumn prefWidth="124.0" text="Color" />
+            <TableColumn prefWidth="102.0" text="Mesure" />
+            <TableColumn minWidth="0.0" prefWidth="121.0" text="Badge ID" />
+            <TableColumn minWidth="0.0" prefWidth="108.0" text="Unit Price(Rs.)" />
+            <TableColumn minWidth="0.0" prefWidth="64.0" text="Qty" />
+            <TableColumn minWidth="0.0" prefWidth="90.0" text="Amount(Rs.)" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="savebtn" layoutX="281.0" layoutY="341.0" onAction="#addOrderDetail" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #4cd137;" text="Save" />
+      <JFXButton layoutX="382.0" layoutY="341.0" onAction="#updateOrderDetail" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #fbc531;" text="Update" />
+      <JFXButton fx:id="deletebtn" layoutX="483.0" layoutY="341.0" onAction="#deleteOrderDetail" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #e84118;" text="Delete" />
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="1068.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/reset.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="54.0" layoutY="62.0" text="Order ID :" />
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="521.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/search.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="unitpricetxt" layoutX="575.0" layoutY="301.0" prefHeight="25.0" prefWidth="68.0" />
+      <TableView fx:id="badgetable" layoutX="765.0" layoutY="129.0" onMouseClicked="#getSelectBadge" prefHeight="139.0" prefWidth="372.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Badge Id" />
+          <TableColumn prefWidth="91.0" text="Exp date" />
+            <TableColumn prefWidth="102.0" text="UnitPrice" />
+            <TableColumn prefWidth="102.0" text="Qty" />
+        </columns>
+      </TableView>
+      <Label layoutX="912.0" layoutY="470.0" text="Net.Total :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="nettotallb" layoutX="1030.0" layoutY="474.0" text="0000.00">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="placeorderbtn" layoutX="908.0" layoutY="551.0" onAction="#conformPlaceOrder" prefHeight="35.0" prefWidth="228.0" style="-fx-background-color: #4cd137;" text="Place" />
+      <Label fx:id="orderidlb" layoutX="119.0" layoutY="58.0" text="Label" textFill="#f20404">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="itemtable" layoutX="9.0" layoutY="129.0" onMouseClicked="#getSelectItem" prefHeight="139.0" prefWidth="751.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Item Id" />
+            <TableColumn prefWidth="90.0" text="Brand Name" />
+            <TableColumn prefWidth="101.99996948242188" text="Catogary Name" />
+            <TableColumn prefWidth="96.0" text="Item Name" />
+            <TableColumn prefWidth="113.0" text="Description" />
+            <TableColumn minWidth="0.0" prefWidth="98.0" text="Color" />
+            <TableColumn prefWidth="83.66668701171875" text="Mesure" />
+            <TableColumn prefWidth="102.33331298828125" text="HandOnQty" />
+         </columns>
+      </TableView>
+      <TextField fx:id="itemIdsearchbar" layoutX="23.0" layoutY="96.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="121.0" promptText="Search by Item ID.." />
+      <TextField fx:id="itemNamesearchbar" layoutX="151.0" layoutY="96.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="206.0" promptText=" Search by Item Name.." />
+      <TextField fx:id="itemColorsearchbar" layoutX="364.0" layoutY="96.0" onKeyReleased="#getItemValue" prefHeight="25.0" prefWidth="142.0" promptText="Search by Color.." />
+      <TextField fx:id="badgeIdtxt" layoutX="917.0" layoutY="302.0" prefHeight="25.0" prefWidth="131.0" />
+      <Label layoutX="960.0" layoutY="282.0" text="badge" />
+      <TextField fx:id="itemcolortxt" layoutX="229.0" layoutY="301.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="itemmesuretxt" layoutX="344.0" layoutY="301.0" prefHeight="25.0" prefWidth="119.0" />
+      <Label fx:id="hoqlb" layoutX="528.0" layoutY="303.0" text="HOQ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="303.0" text="/">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="283.0" text="Color" />
+      <Label layoutX="386.0" layoutY="283.0" text="Mesure" />
+      <Label fx:id="amountlb" layoutX="678.0" layoutY="306.0" text="Amount" />
+   </children>
+</AnchorPane>

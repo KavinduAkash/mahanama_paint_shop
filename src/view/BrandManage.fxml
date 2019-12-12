@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="569.0" prefWidth="1117.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BrandManageController">
+   <children>
+      <Label layoutX="42.0" layoutY="42.0" text="Manage Brands" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="brandnametxt" layoutX="51.0" layoutY="177.0" prefHeight="25.0" prefWidth="269.0" />
+      <TextArea fx:id="desctxt" layoutX="51.0" layoutY="312.0" prefHeight="124.0" prefWidth="269.0" />
+      <Label layoutX="47.0" layoutY="81.0" text="Brand Details">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="175.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/reset.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="countrytxt" layoutX="51.0" layoutY="238.0" prefHeight="25.0" prefWidth="269.0" />
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="175.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/reset.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="brandsearchbar" layoutX="454.0" layoutY="129.0" onKeyReleased="#searchBrand" prefHeight="25.0" prefWidth="249.0" promptText="Search by Brand ID,Brand Name, Country.." />
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="721.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/search.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="946.0" layoutY="130.0" text="All brands" />
+      <JFXButton fx:id="savebtn" layoutX="50.0" layoutY="455.0" onAction="#saveBrand" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #4cd137;" text="Save" />
+      <JFXButton fx:id="updatebtn" layoutX="151.0" layoutY="455.0" onAction="#udateBrand" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #fbc531;" text="Update" />
+      <JFXButton fx:id="deletebtn" layoutX="252.0" layoutY="455.0" onAction="#deleteBrand" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #e84118;" text="Delete" />
+      <Separator layoutX="943.0" layoutY="125.0" orientation="VERTICAL" prefHeight="34.0" prefWidth="0.0" />
+      <Label layoutX="52.0" layoutY="125.0" text="Brand Id :" />
+      <Label layoutX="51.0" layoutY="155.0" text="Brand Name :" />
+      <Label layoutX="52.0" layoutY="214.0" text="Country :" />
+      <Label fx:id="brandIdlb" layoutX="117.0" layoutY="125.0" text="Label" textFill="#f20404">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="285.0" text="Description :" />
+      <TableView fx:id="brandtable" layoutX="425.0" layoutY="173.0" onMouseClicked="#getSelectData" prefHeight="316.0" prefWidth="634.0">
+         <columns>
+            <TableColumn prefWidth="74.0" text="Brand Id" />
+            <TableColumn prefWidth="130.0" text="Name" />
+            <TableColumn prefWidth="134.0" text="Country" />
+            <TableColumn prefWidth="292.0" text="Description" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

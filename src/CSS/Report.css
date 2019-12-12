@@ -1,0 +1,32 @@
+.reportnavibtn{
+    -fx-background-color:  #263238;
+    -fx-background-radius: 0 50 50 0;
+}
+.reportnavitxt{
+    -fx-text-fill: #ffffff;
+}
+.reportbtnrack{
+    -fx-background-radius: 0 50 50 0;
+}
+.inBtns{
+    -fx-background-color: #32c2ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.inbtn1{
+    -fx-background-color:  #263238;
+    -fx-background-radius: 50 0 0 50;
+}
+
+.inbtn2{
+    -fx-background-color:  #263238;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.inbtn3{
+    -fx-background-color:  #263238;
+    -fx-background-radius: 0 50 50 0;
+}
+.inbtnrack{
+    -fx-background-radius: 20 20 0 0;
+}

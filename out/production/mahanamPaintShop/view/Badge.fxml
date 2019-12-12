@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onDragDetected="#savebadge" prefHeight="587.0" prefWidth="1138.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BadgeController">
+   <children>
+      <Label layoutX="63.0" layoutY="92.0" text="Badge Id :" />
+      <Label layoutX="63.0" layoutY="141.0" text="Buying Price Rs. :" />
+      <Label layoutX="66.0" layoutY="227.0" text="Expire Date :" />
+      <Label layoutX="66.0" layoutY="307.0" text="Saling Price Rs. :" />
+      <TextField fx:id="badgebuypricetxt" layoutX="63.0" layoutY="172.0" prefHeight="25.0" prefWidth="206.0" />
+      <TextField fx:id="badgesalepricetxt" layoutX="66.0" layoutY="333.0" prefHeight="25.0" prefWidth="206.0" />
+      <TableView fx:id="badgetable" layoutX="525.0" layoutY="107.0" onMouseClicked="#selectBadge" prefHeight="357.0" prefWidth="396.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Badge Id" />
+          <TableColumn prefWidth="106.0" text="Buying Price" />
+            <TableColumn prefWidth="106.0" text="Exp Date" />
+            <TableColumn prefWidth="106.0" text="Saling Price" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="savebtn" layoutX="66.0" layoutY="398.0" onAction="#addBadge" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #4cd137;" text="Save" />
+      <JFXButton fx:id="updatebtn" layoutX="167.0" layoutY="398.0" onAction="#updateBadge" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #fbc531;" text="Update" />
+      <JFXButton fx:id="deletebtn" layoutX="268.0" layoutY="398.0" onAction="#deleteBadge" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #e84118;" text="Delete" />
+      <TextField fx:id="buypricesearchbar" layoutX="525.0" layoutY="70.0" onKeyReleased="#searchBadge" prefHeight="25.0" prefWidth="102.0" promptText="buying price.." />
+      <Label layoutX="42.0" layoutY="41.0" text="Manage Badge" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="expdatetxt" layoutX="64.0" layoutY="258.0" prefHeight="25.0" prefWidth="206.0" />
+      <Label fx:id="badgeidlb" layoutX="127.0" layoutY="92.0" text="Label" textFill="#f20404">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="salepricesearchbar" layoutX="750.0" layoutY="70.0" onKeyReleased="#searchBadge" prefHeight="25.0" prefWidth="102.0" promptText="Sale price.." />
+      <DatePicker fx:id="expdatesearchpicbar" layoutX="637.0" layoutY="70.0" onAction="#searchByExpDateAction" prefHeight="25.0" prefWidth="102.0" promptText="Exp date.." />
+      <TextField fx:id="badgeIdsearchbar" layoutX="525.0" layoutY="37.0" onKeyReleased="#searchBadge" prefHeight="25.0" prefWidth="169.0" promptText="Search by only Badge ID.." />
+   </children>
+</AnchorPane>

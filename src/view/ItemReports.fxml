@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemReportsController">
+   <children>
+      <AnchorPane layoutX="114.0" layoutY="14.0" prefHeight="66.0" prefWidth="663.0" style="-fx-background-color: #01579b;" stylesheets="@../CSS/Report.css">
+         <children>
+            <AnchorPane fx:id="itemlistbtn" layoutX="23.0" layoutY="10.0" onMouseClicked="#getItemListAction" prefHeight="47.0" prefWidth="200.0" styleClass="inbtn1" stylesheets="@../CSS/Report.css">
+               <children>
+                  <Label layoutX="86.0" layoutY="16.0" styleClass="reportnavitxt" stylesheets="@../CSS/Report.css" text="Item List" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mostmoveitembtn" layoutX="231.0" layoutY="10.0" onMouseClicked="#getMostmoveItemAction" prefHeight="47.0" prefWidth="200.0" styleClass="inbtn2" stylesheets="@../CSS/Report.css">
+               <children>
+                  <Label layoutX="57.0" layoutY="15.0" styleClass="reportnavitxt" stylesheets="@../CSS/Report.css" text="Most Movable" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="lessmoveitembtn" layoutX="439.0" layoutY="10.0" onMouseClicked="#getLessMoveItemAction" prefHeight="47.0" prefWidth="200.0" styleClass="inbtn3" stylesheets="@../CSS/Report.css">
+               <children>
+                  <Label layoutX="56.0" layoutY="15.0" styleClass="reportnavitxt" stylesheets="@../CSS/Report.css" text="Less Movable" />
+               </children>
+            </AnchorPane>
+         </children>
+         <styleClass>
+            <String fx:value="reportbtnrack" />
+            <String fx:value="reportbtnrack" />
+            <String fx:value="reportbtnrack" />
+            <String fx:value="inbtnrack" />
+         </styleClass>
+      </AnchorPane>
+      <TableView fx:id="itemtable" layoutX="11.0" layoutY="141.0" prefHeight="335.0" prefWidth="870.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Item Id" />
+            <TableColumn prefWidth="75.0" text="Brand Name" />
+            <TableColumn prefWidth="94.0" text="Catogary Name" />
+            <TableColumn prefWidth="111.0" text="Item Name" />
+            <TableColumn prefWidth="232.0" text="Description" />
+            <TableColumn minWidth="0.0" prefWidth="101.0" text="Color" />
+            <TableColumn prefWidth="82.0" text="Mesure" />
+            <TableColumn prefWidth="100.0" text="Hand On Qty" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="printbtn" layoutX="825.0" layoutY="494.0" onMouseClicked="#printReportAction">
+         <image>
+            <Image url="@../image/naviIcon/print_48px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="topiclb" layoutX="34.0" layoutY="95.0" text="Label" textFill="#0d47a1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

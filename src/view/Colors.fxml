@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="587.0" prefWidth="1138.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ColorsController">
+   <children>
+      <Label layoutX="79.0" layoutY="74.0" text="Color ID :" />
+      <Label layoutX="60.0" layoutY="115.0" text="Color Name :" />
+      <TextField fx:id="colornametxt" layoutX="60.0" layoutY="142.0" prefHeight="25.0" prefWidth="248.0" />
+      <TableView fx:id="colortable" layoutX="552.0" layoutY="110.0" onMouseClicked="#getRecordValue" prefHeight="367.0" prefWidth="412.0">
+         <columns>
+            <TableColumn prefWidth="158.0" text="Color Id" />
+            <TableColumn minWidth="0.0" prefWidth="253.0" text="Color Name" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="colorsavebtn" layoutX="60.0" layoutY="230.0" onAction="#saveColorbtnAction" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #4cd137;" text="Save" />
+      <JFXButton fx:id="colorupdatebtn" layoutX="161.0" layoutY="230.0" onAction="#updateColorbtnAction" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #fbc531;" text="Update" />
+      <JFXButton fx:id="colordeletebtn" layoutX="262.0" layoutY="230.0" onAction="#deleteColorbtnAction" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #e84118;" text="Delete" />
+      <Label layoutX="22.0" layoutY="14.0" text="Manage Color " textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="colorIdlb" layoutX="148.0" layoutY="73.0" text="Lable" textFill="#f20404">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="colorsearchbar" layoutX="552.0" layoutY="79.0" onKeyReleased="#getSearchValue" prefHeight="25.0" prefWidth="327.0" promptText="Search by color Id or Color Name.." />
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="892.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/search.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="reloadbtn" layoutX="964.0" layoutY="81.0" onAction="#reloadColorTable" text="Reload" />
+      <Separator layoutX="964.0" layoutY="76.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

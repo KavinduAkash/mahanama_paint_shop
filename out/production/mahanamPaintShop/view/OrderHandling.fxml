@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="462.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderHandlingController">
+   <children>
+      <TableView fx:id="ordertbl" layoutX="215.0" layoutY="75.0" onMouseClicked="#getSelectedOrder" prefHeight="371.0" prefWidth="394.0">
+         <columns>
+            <TableColumn prefWidth="70.0" text="Oreder Id" />
+            <TableColumn prefWidth="95.0" text="Date" />
+            <TableColumn prefWidth="113.0" text="Total Amount(Rs.)" />
+            <TableColumn prefWidth="118.0" text="State" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="195.0" text="Order Handling" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="114.0" prefHeight="24.0" prefWidth="57.0" text="Order ID :" />
+      <Label layoutX="42.0" layoutY="160.0" prefHeight="24.0" prefWidth="68.0" text="Order Date :" />
+      <Label fx:id="orderIdlb" layoutX="115.0" layoutY="118.0" text="Label" />
+      <JFXButton fx:id="orderdeletebtn" layoutX="10.0" layoutY="308.0" onAction="#deleteOrder" prefHeight="44.0" prefWidth="185.0" style="-fx-background-color: #e84118;" text="Delete" />
+      <Label fx:id="orderdatelb" layoutX="120.0" layoutY="164.0" text="Label" />
+      <Label layoutX="7.0" layoutY="199.0" prefHeight="24.0" prefWidth="102.0" text="Order Amount(Rs.):" />
+      <Label fx:id="orderamountlb" layoutX="119.0" layoutY="203.0" text="Label" />
+      <Label layoutX="76.0" layoutY="238.0" prefHeight="24.0" prefWidth="36.0" text="State :" />
+      <Label fx:id="orderstatelb" layoutX="120.0" layoutY="242.0" text="Label" />
+   </children>
+</AnchorPane>

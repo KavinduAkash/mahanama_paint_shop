@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="653.0" styleClass="loginimage" stylesheets="@../CSS/loginCss.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane fx:id="lognOnpane" layoutX="362.0" layoutY="30.0" prefHeight="377.0" prefWidth="263.0" styleClass="loginOnpane" stylesheets="@../CSS/loginCss.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="163.0" layoutX="49.0" layoutY="-14.0">
+               <image>
+                  <Image url="@../image/—Pngtree—purple%20paint%20spots_1050461.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="usernametxt" labelFloat="true" layoutX="14.0" layoutY="137.0" onKeyReleased="#getFocusPasswordfieldAction" prefHeight="25.0" prefWidth="231.0" promptText="User Name" />
+            <Label layoutX="104.0" layoutY="33.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="loginggifviewer" fitHeight="74.0" fitWidth="80.0" layoutX="86.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/preloader2.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="loginbtn" layoutX="418.0" layoutY="284.0" onMouseClicked="#gotodashboard" prefHeight="35.0" prefWidth="142.0" style="-fx-border-color: #20bf6b; -fx-background-color: #45aaf2;" styleClass="loginbtnstyl" stylesheets="@../CSS/loginCss.css" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXPasswordField fx:id="passwordtxt" labelFloat="true" layoutX="373.0" layoutY="228.0" onKeyReleased="#getLoginActionByEnterKey" prefHeight="25.0" prefWidth="231.0" promptText="Password" />
+      <ImageView fitHeight="150.0" fitWidth="151.0" layoutX="38.0" layoutY="30.0">
+         <image>
+            <Image url="@../image/logo/newLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

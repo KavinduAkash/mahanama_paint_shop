@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="605.0" prefWidth="1128.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnsController">
+   <children>
+      <Label layoutX="28.0" layoutY="19.0" prefHeight="35.0" prefWidth="210.0" text="Customer Returns" textFill="#32c2ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="69.0" text="Return ID :" />
+      <Label fx:id="returnIdlb" layoutX="130.0" layoutY="69.0" text="Label" />
+      <Label layoutX="67.0" layoutY="107.0" text="Order ID :" />
+      <Label layoutX="54.0" layoutY="144.0" text="Order Date :" />
+      <Label layoutX="75.0" layoutY="183.0" text="Item ID :" />
+      <Label layoutX="66.0" layoutY="220.0" text="Badge ID :" />
+      <Label layoutX="58.0" layoutY="279.0" text="Return Qty :" />
+      <Label layoutX="72.0" layoutY="354.0" text="Reasone :" />
+      <Label layoutX="35.0" layoutY="470.0" text="Return Method :" />
+      <JFXComboBox fx:id="returnmethodcombo" layoutX="132.0" layoutY="465.0" prefHeight="25.0" prefWidth="151.0" />
+      <Label layoutX="44.0" layoutY="316.0" text="Return Value  :" />
+      <TextField fx:id="orderIdtxt" layoutX="126.0" layoutY="103.0" onKeyPressed="#orderIdCheckAction" prefHeight="25.0" prefWidth="119.0" />
+      <Label fx:id="orderdatelb" layoutX="130.0" layoutY="144.0" text="Label" />
+      <TextField fx:id="itemIdtext" layoutX="126.0" layoutY="179.0" prefHeight="25.0" prefWidth="119.0" />
+      <TextField fx:id="badgeIdtxt" layoutX="126.0" layoutY="216.0" prefHeight="25.0" prefWidth="119.0" />
+      <TextField fx:id="returnqtytxt" layoutX="125.0" layoutY="275.0" onKeyReleased="#getReturnQty" prefHeight="25.0" prefWidth="119.0" />
+      <Label fx:id="returnvaluelb" layoutX="129.0" layoutY="316.0" text="Label" />
+      <TextArea fx:id="reasontxt" layoutX="127.0" layoutY="354.0" prefHeight="97.0" prefWidth="200.0" />
+      <TableView fx:id="orderdetailtable" layoutX="398.0" layoutY="59.0" onMouseClicked="#getSelectRow" prefHeight="170.0" prefWidth="470.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Order ID" />
+          <TableColumn prefWidth="75.0" text="Index" />
+            <TableColumn prefWidth="75.0" text="Item ID" />
+            <TableColumn prefWidth="75.0" text="Badge ID" />
+            <TableColumn prefWidth="85.0" text="Qty" />
+            <TableColumn prefWidth="85.0" text="Amount" />
+        </columns>
+      </TableView>
+      <TableView fx:id="returntable" layoutX="395.0" layoutY="254.0" prefHeight="279.0" prefWidth="642.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Return ID" />
+          <TableColumn prefWidth="75.0" text="Order ID" />
+            <TableColumn prefWidth="75.0" text="Item ID" />
+            <TableColumn prefWidth="75.0" text="Badge ID" />
+            <TableColumn prefWidth="75.0" text="Qty" />
+            <TableColumn prefWidth="75.0" text="Amount" />
+            <TableColumn prefWidth="75.0" text="date" />
+            <TableColumn prefWidth="113.0" text="Return Method" />
+        </columns>
+      </TableView>
+      <Label fx:id="orderIdfoundlb" layoutX="251.0" layoutY="107.0" text="Label" />
+      <Label fx:id="itemfoundlb" layoutX="253.0" layoutY="183.0" text="Label" />
+      <Label fx:id="badgefoundlb" layoutX="253.0" layoutY="214.0" text="Label" />
+      <JFXButton fx:id="returnconformbtn" layoutX="65.0" layoutY="533.0" onAction="#returnConformAction" prefHeight="25.0" prefWidth="252.0" text="Conform" />
+      <Label layoutX="253.0" layoutY="229.0" text="expD :" />
+      <Label fx:id="badgeexpDlb" layoutX="288.0" layoutY="230.0" text="Label" />
+      <Label layoutX="203.0" layoutY="248.0" text="Sale price (Rs.) : " />
+      <Label fx:id="salepricelb" layoutX="289.0" layoutY="248.0" text="Label" />
+   </children>
+</AnchorPane>

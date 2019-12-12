@@ -1,0 +1,50 @@
+.Dashnavipan{
+   // -fx-background-image: url("../image/naviIcon/15021.jpg");
+    //-fx-background-position: center left;
+    //-fx-background-size: 50% 100%;
+    -fx-background-radius: 0 50 0 0;
+    -fx-background-color:  #00b0ff;
+
+}
+
+.naviBtnRacks{
+    -fx-background-color: rgba(16, 23, 30, 0.52);
+    -fx-background-radius: 0 50 0 0;
+}
+
+.naviBtnStyle{
+    -fx-background-color:  #636e72;
+    -fx-background-radius: 0 50 50 0;
+}
+
+.naviBtnStyle:hover{
+   // -fx-background-color:  #32c2ff;
+    -fx-background-radius: 0 50 50 0;
+    -fx-pref-width: 180px;
+}
+
+.bottumPaneStyle{
+    -fx-background-image: url("../image/bottumPane/bottumpane.jpg");
+    -fx-background-position: bottom left;
+}
+
+.naviBtnStyle:hover{
+    -fx-background-width: 170;
+}
+
+.dashboardtxtpaneDash{
+    -fx-background-radius: 0 50 50 0;
+    -fx-background-color:  #636e72;
+}
+#dashboardtxtpaneMC,
+#dashboardtxtpanePO,
+#dashboardItemnpane,
+#dashboardtxtpaneSP,
+#dashboardtxtpaneMB,
+#dashboardtxtSR,
+#dashboardtxtpaneMReturns,
+#dashboardtxtpaneGR{
+    -fx-border-radius: 0,50,50,0;
+}
+
+
